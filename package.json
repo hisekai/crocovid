@@ -1,49 +1,50 @@
 {
-  "name": "crocovid",
-  "version": "1.0.0",
-  "bin": {
-    "crocovid": "index.js"
-  },
-  "description": "A CLI for printing COVID-19 stats in Croatia fetched from koronavirus.hr",
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "utils"
-  ],
-  "scripts": {
-    "format": "prettier --write \"./**/*.{js, json}\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kirea/crocovid.git"
-  },
-  "keywords": [
-    "covid-19",
-    "croatia",
-    "hrvatska",
-    "koronavirus",
-    "stats",
-    "CLI"
-  ],
-  "author": {
-    "name": "kirea"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kirea/crocovid/issues"
-  },
-  "homepage": "https://github.com/kirea/crocovid#readme",
-  "devDependencies": {
-    "prettier": "^2.1.2"
-  },
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "cli-table3": "^0.6.0",
-    "cli-welcome": "^2.2.2",
-    "enquirer": "^2.3.6",
-    "log-symbols": "^4.0.0",
-    "meow": "^7.1.1",
-    "node-fetch": "^2.6.1",
-    "ora": "^5.1.0"
-  }
+	"name": "crocovid",
+	"version": "1.0.0",
+	"bin": {
+		"crocovid": "index.js"
+	},
+	"description": "A CLI for printing COVID-19 stats in Croatia fetched from koronavirus.hr",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"footer.js",
+		"utils"
+	],
+	"scripts": {
+		"format": "prettier --write \"./**/*.{js, json}\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kirea/crocovid.git"
+	},
+	"keywords": [
+		"covid-19",
+		"croatia",
+		"hrvatska",
+		"koronavirus",
+		"stats",
+		"CLI"
+	],
+	"author": {
+		"name": "kirea"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kirea/crocovid/issues"
+	},
+	"homepage": "https://github.com/kirea/crocovid#readme",
+	"devDependencies": {
+		"prettier": "^2.1.2"
+	},
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"cli-table3": "^0.6.0",
+		"cli-welcome": "^2.2.2",
+		"enquirer": "^2.3.6",
+		"log-symbols": "^4.0.0",
+		"meow": "^7.1.1",
+		"node-fetch": "^2.6.1",
+		"ora": "^5.1.0"
+	}
 }
