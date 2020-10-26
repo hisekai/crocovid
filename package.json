@@ -16,7 +16,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/kirea/crocovid.git"
+		"url": "git+https://github.com/hisekai/crocovid.git"
 	},
 	"keywords": [
 		"covid-19",
@@ -31,9 +31,9 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/kirea/crocovid/issues"
+		"url": "https://github.com/hisekai/crocovid/issues"
 	},
-	"homepage": "https://github.com/kirea/crocovid#readme",
+	"homepage": "https://github.com/hisekai/crocovid#readme",
 	"devDependencies": {
 		"prettier": "^2.1.2"
 	},
