@@ -41,7 +41,6 @@
 		"cli-table3": "^0.6.0",
 		"cli-welcome": "^2.2.2",
 		"enquirer": "^2.3.6",
-		"log-symbols": "^4.0.0",
 		"meow": "^7.1.1",
 		"node-fetch": "^2.6.1",
 		"ora": "^5.1.0"
