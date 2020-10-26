@@ -1,6 +1,6 @@
 {
 	"name": "crocovid",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"bin": {
 		"crocovid": "index.js"
 	},
