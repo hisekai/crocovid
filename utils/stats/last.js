@@ -1,34 +1,33 @@
 const { bold } = require("chalk");
 const Table = require("cli-table3");
+const formatDate = require("./../format/formatDate");
+const formatNumbers = require("./../format/formatNumbers");
 
 module.exports = async (data, flags) => {
 	const cases = data[0];
 	const prevCases = data[1];
-	const numFormat = flags.english ? "de-DE" : "hr-HR";
 	const date = cases.Datum;
-	let dateFormatted = date.split(" ");
-	dateFormatted = `${new Date(dateFormatted[0])
-		.toLocaleDateString(numFormat)
-		.replace(" ", "")
-		.split(" ")
-		.join("")
-		.slice(0, -1)} ${dateFormatted[1]}`;
-	const croatiaCases = cases.SlucajeviHrvatska.toLocaleString(numFormat);
-	const worldCases = cases.SlucajeviSvijet.toLocaleString(numFormat);
-	const newCroatiaCases = (
-		cases.SlucajeviHrvatska - prevCases.SlucajeviHrvatska
-	).toLocaleString(numFormat);
-	const newWorldCases = (
-		cases.SlucajeviSvijet - prevCases.SlucajeviSvijet
-	).toLocaleString(numFormat);
-	const croatiaRecoveredCases = cases.IzlijeceniHrvatska.toLocaleString(
-		numFormat
+	const dateFormatted = formatDate(date, flags.english, true);
+	const croatiaCases = formatNumbers(cases.SlucajeviHrvatska, flags.english);
+	const worldCases = formatNumbers(cases.SlucajeviSvijet, flags.english);
+	const newCroatiaCases = formatNumbers(
+		cases.SlucajeviHrvatska - prevCases.SlucajeviHrvatska,
+		flags.english
 	);
-	const worldRecoveredCases = cases.IzlijeceniSvijet.toLocaleString(
-		numFormat
+	const newWorldCases = formatNumbers(
+		cases.SlucajeviSvijet - prevCases.SlucajeviSvijet,
+		flags.english
 	);
-	const croatiaDeathCases = cases.UmrliHrvatska.toLocaleString(numFormat);
-	const worldDeathCases = cases.UmrliSvijet.toLocaleString(numFormat);
+	const croatiaRecoveredCases = formatNumbers(
+		cases.IzlijeceniHrvatska,
+		flags.english
+	);
+	const worldRecoveredCases = formatNumbers(
+		cases.IzlijeceniSvijet,
+		flags.english
+	);
+	const croatiaDeathCases = formatNumbers(cases.UmrliHrvatska, flags.english);
+	const worldDeathCases = formatNumbers(cases.UmrliSvijet, flags.english);
 	const prefix1 = flags.english ? "Croatia" : "HR";
 	const prefix2 = flags.english ? "World" : "Svijet";
 	const tableHead = flags.english
