@@ -34,5 +34,4 @@ module.exports = async flags => {
 		]);
 	});
 	console.log(table.toString());
-	console.log("\n");
 };
