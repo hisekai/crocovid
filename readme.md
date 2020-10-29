@@ -53,3 +53,13 @@ Display stats for counties and print the text in English
 ```sh
 npx crocovid -ce
 ```
+
+Display the helptext
+```sh
+npx help
+```
+
+### TODO
+
+- [ ] Add graphs
+- [ ] Add the option to view demographic data
