@@ -5,8 +5,8 @@ const formatDate = require("./../format/formatDate");
 const formatNumbers = require("./../format/formatNumbers");
 
 module.exports = async (data, flags, input) => {
-	const date = data[0].Datum;
-	let counties = data[0].PodaciDetaljno;
+	const date = data.Datum;
+	let counties = data.PodaciDetaljno;
 	let sortedCounties = flags.sort && (await sortBy(counties, input));
 	let dateFormatted = formatDate(date, flags.english, true);
 	const tableHead = flags.english
